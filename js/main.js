@@ -1,0 +1,50 @@
+$(document).ready(function () {
+  $(".menu-mobi").click(function () {
+    $(this).toggleClass("active");
+    $("#header-bottom > *").toggleClass("nav-active");
+    if ($("#header-bottom > *").hasClass("nav-active")) {
+      $("body").addClass("no-scroll");
+    } else {
+      $("body").removeClass("no-scroll");
+    }
+  });
+  $(".list-posts").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 800,
+    autoplayHoverPause: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+    },
+  });
+  $(".slider").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 800,
+    autoplayHoverPause: true,
+    nav: true,
+    dots: false,
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
+    items: 1,
+  });
+});
