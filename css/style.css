@@ -554,8 +554,79 @@ span.price {
   font-size: 1.5rem;
 }
 #list-posts .has-hover .box-text,
-#list-posts .has-hover:hover .box-text {
+#list-posts .has-hover:hover .box-text,
+#our-team .has-hover .box-text,
+#our-team .has-hover:hover .box-text {
   box-shadow: none;
+}
+#our-team .box-image img {
+  height: 25rem;
+  object-position: center top;
+}
+#our-team .person-social {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  transition: all 1s;
+  opacity: 0;
+  visibility: hidden;
+}
+#our-team .has-hover:hover .person-social {
+  opacity: 1;
+  visibility: visible;
+}
+
+#our-team .person-social li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+#our-team .person-social li {
+  display: inline-block;
+  transition: all 0.5s;
+  transform: translateY(15rem);
+}
+#our-team .has-hover:hover .person-social li {
+  transform: translateY(0);
+}
+#our-team .person-social li:nth-child(2) {
+  transition-delay: 0.15s;
+}
+#our-team .person-social li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+#our-team .person-social li:nth-child(4) {
+  transition-delay: 0.45s;
+}
+#our-team .person-social li a {
+  display: block;
+  color: #ffffff;
+  background-color: rgb(35, 43, 56);
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  transition: all 0.3s;
+  font-size: 1.7rem;
+  text-align: center;
+}
+#our-team .person-social li a:hover {
+  background-color: var(--secondary-color);
+}
+.person-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(35, 43, 56);
+}
+.person-title {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: rgb(35, 43, 56);
+  margin-bottom: 1rem;
+}
+.person-introduce {
+  font-size: 1.4rem;
 }
 #news-letter {
   padding: 0px;
@@ -632,7 +703,7 @@ span.price {
   border: 3px solid rgb(35, 43, 56);
   transform: rotate(45deg);
   border-radius: 1rem;
-  margin: 0px 10px;
+  margin: 0 1rem;
   transition: all 0.2s ease 0s;
 }
 .box-diamond img,

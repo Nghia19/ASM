@@ -8,6 +8,21 @@ $(document).ready(function () {
       $("body").removeClass("no-scroll");
     }
   });
+  $(".slider").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 800,
+    autoplayHoverPause: true,
+    nav: true,
+    dots: false,
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
+    items: 1,
+  });
+
   $(".list-posts").owlCarousel({
     loop: true,
     autoplay: true,
@@ -33,19 +48,30 @@ $(document).ready(function () {
       },
     },
   });
-  $(".slider").owlCarousel({
+  $(".our-team").owlCarousel({
     loop: true,
     autoplay: true,
     autoplayTimeout: 5000,
     smartSpeed: 800,
     autoplayHoverPause: true,
+    margin: 30,
     nav: true,
     dots: false,
     navText: [
       '<i class="fa fa-angle-left"></i>',
       '<i class="fa fa-angle-right"></i>',
     ],
-    items: 1,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+    },
   });
 
   var btn = $("#back-to-top");
