@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main(){
+	printf("++-------------------------------------------------------++\n");
+	printf("|    Chuong trinh tinh lai xuat ngan hang vay tra gop      |\n");
+	printf("++-------------------------------------------------------++\n\n\n");
+	double tienCanvay;
+	double LaiXuat = 0.05;
+	int kyHan = 12,i;
+	do{
+		printf("Nhap vao so tien ban muon vay: ");
+	}while(scanf("%lf",&tienCanvay)!=1 || tienCanvay<0);
+	double TienGocHangThang = tienCanvay/kyHan;
+	double tienLaiHangThang;
+	double tongTienPhaiTra;
+	printf("Ky han | Lai phai tra | Goc phai tra | Tien phai tra | Tien con lai\n\n");
+	for(i = 1; i <= kyHan; i++){
+		tienLaiHangThang = tienCanvay*LaiXuat;
+		tienCanvay -= TienGocHangThang;
+		printf("%2d     |   %10.0lf |  %10.0lf  |   %10.0lf  |   %.0lf     \n\n",i,tienLaiHangThang,TienGocHangThang,TienGocHangThang + tienLaiHangThang,tienCanvay);
+		tongTienPhaiTra += TienGocHangThang + tienLaiHangThang;
+	}
+	printf("\nTong so tien phai tra la: %.0lf", 500000);
+	return 0;
+}
