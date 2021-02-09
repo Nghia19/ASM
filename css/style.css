@@ -551,16 +551,24 @@ span.price {
 }
 .post-title a {
   color: rgb(35, 43, 56);
-  font-size: 2rem;
-  line-height: 2.4rem;
+  font-size: 2.1rem;
   transition: all 0.6s;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .has-hover:hover .post-title a {
   color: var(--primary-color);
 }
 .post-meta p,
 .post-excerpt {
-  font-size: 1.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 #list-posts .has-hover .box-text,
 #list-posts .has-hover:hover .box-text,
@@ -636,11 +644,10 @@ span.price {
 }
 
 #news-letter {
-  padding: 0px;
   background-color: rgb(255, 255, 255);
   background-image: url("../img/bg_newsletter.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: center bottom;
   min-height: 140px;
 }
@@ -814,6 +821,12 @@ span.price {
 .absolute-footer span {
   color: var(--secondary-color);
 }
+
+/* sssss */
+.page-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev {
   width: 3.5rem;
@@ -841,6 +854,7 @@ span.price {
 .owl-theme .owl-nav {
   margin: 0;
 }
+
 @media (max-width: 849px) {
   #header-bottom > * {
     display: block;
