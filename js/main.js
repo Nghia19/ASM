@@ -48,6 +48,32 @@ $(document).ready(function () {
       },
     },
   });
+  $(".related-posts").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 800,
+    autoplayHoverPause: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 2,
+      },
+    },
+  });
+
   $(".our-team").owlCarousel({
     loop: true,
     autoplay: true,
