@@ -100,22 +100,22 @@ $(document).ready(function () {
     },
   });
 
-  $(".slider-for").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: ".slider-nav",
-  });
-  $(".slider-nav").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: ".slider-for",
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true,
-  });
-  $(".slider-for .item").zoom(); // add zoom
+  // $(".slider-for").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   fade: true,
+  //   asNavFor: ".slider-nav",
+  // });
+  // $(".slider-nav").slick({
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   asNavFor: ".slider-for",
+  //   dots: true,
+  //   centerMode: true,
+  //   focusOnSelect: true,
+  // });
+  // $(".slider-for .item").zoom(); // add zoom
   var btn = $("#back-to-top");
   $(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
@@ -124,7 +124,31 @@ $(document).ready(function () {
       btn.removeClass("show");
     }
   });
-
+  $(".testi").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 800,
+    autoplayHoverPause: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 2,
+      },
+    },
+  });
   btn.on("click", function (e) {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "300");

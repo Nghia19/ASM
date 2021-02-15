@@ -18,6 +18,8 @@ a:not(.button):hover {
 span,
 p {
   font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 html {
@@ -116,9 +118,6 @@ h6 {
   font-size: 2.2rem;
 }
 
-p {
-  margin-top: 0;
-}
 section {
   padding: 3rem 0;
 }
@@ -154,6 +153,9 @@ textarea {
 }
 .button.secondary {
   background-color: var(--secondary-color);
+}
+.button.secondary:hover {
+  background-color: var(--primary-color);
 }
 .text-center {
   text-align: center;
@@ -384,6 +386,36 @@ ul {
     flex-basis: 100%;
   }
 }
+@media screen and (max-width: 549px) {
+  .small-col-first {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+  .small-col-center {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .large-col-first {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 849px) {
+  .medium-col-first {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+
+  .col {
+    padding-bottom: 3ren;
+  }
+}
 .header-top {
   position: relative;
   background-color: var(--primary-color);
@@ -505,10 +537,7 @@ ul {
 #slider {
   padding: 0;
 }
-.slider.owl-carousel .owl-nav button {
-  top: 50% !important;
-  transform: translateY(-50%);
-}
+
 #banner .banner {
   height: 25rem;
 }
@@ -1291,12 +1320,104 @@ select.orderby {
   width: 100%;
   max-width: max-content;
 }
+/* sssss */
+#we-guarantee {
+  background-image: url("../img/bg-we-guarantee.jpg");
+  background-color: #f3f0e7;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto;
+  padding: 10rem 0;
+}
+#we-guarantee h2 {
+  font-size: 4rem;
+}
+#we-guarantee h3 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+/* vip products */
+#vip-products h2 {
+  font-size: 4rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+#vip-products a.button {
+  margin-top: 2rem;
+}
+#testimonials {
+  position: relative;
+  background-image: url("../img/bg-testimonials.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 5rem 0;
+}
+#testimonials .testi .owl-stage-outer {
+  border-radius: 1.5rem;
+}
+#testimonials .testi .item {
+  background: #fff;
+  padding: 5rem 5rem;
+  border-radius: 1.5rem;
+}
+#testimonials .testi .item .profile {
+  display: flex;
+  padding-left: 1.5rem;
+}
+#testimonials .testi .item .profile img {
+  border-radius: 100%;
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+}
+#testimonials .testi .item .profile .information {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+#testimonials .testi .item .profile .information p {
+  font-size: 2.4rem;
+  margin: 0 auto 0;
+  color: var(--primary-color);
+  font-weight: 900;
+  line-height: 1;
+}
+#testimonials .testi .item .profile .information span {
+  font-weight: bold;
+  margin-top: -4px;
+  line-height: 1.6em;
+  font-size: 1.4rem;
+}
+#testimonials .testi .item > p {
+  margin-bottom: 1.5rem;
+  display: block;
+  z-index: 2;
+  text-align: center;
+}
+#testimonials .testi .item .icon {
+  text-align: center;
+}
+#testimonials .testi .item .icon i {
+  font-size: 3.2rem;
+  color: var(--secondary-color);
+}
+.owl-nav {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease 0s;
+}
+.owl-carousel:hover .owl-nav {
+  opacity: 1;
+  visibility: visible;
+}
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev {
   width: 3.5rem;
   height: 3.5rem;
   position: absolute;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 2rem;
   color: rgb(255, 255, 255);
   border: 1px solid var(--secondary-color);
