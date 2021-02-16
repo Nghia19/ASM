@@ -99,6 +99,31 @@ $(document).ready(function () {
       },
     },
   });
+  $(".our-awards").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 8000,
+    smartSpeed: 800,
+    autoplayHoverPause: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 2,
+      },
+      600: {
+        items: 4,
+      },
+      1000: {
+        items: 6,
+      },
+    },
+  });
 
   // $(".slider-for").slick({
   //   slidesToShow: 1,
