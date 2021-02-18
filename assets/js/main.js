@@ -124,31 +124,6 @@ $(document).ready(function () {
       },
     },
   });
-
-  // $(".slider-for").slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   fade: true,
-  //   asNavFor: ".slider-nav",
-  // });
-  // $(".slider-nav").slick({
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   asNavFor: ".slider-for",
-  //   dots: true,
-  //   centerMode: true,
-  //   focusOnSelect: true,
-  // });
-  // $(".slider-for .item").zoom(); // add zoom
-  var btn = $("#back-to-top");
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
-      btn.addClass("show");
-    } else {
-      btn.removeClass("show");
-    }
-  });
   $(".testi").owlCarousel({
     loop: true,
     autoplay: true,
@@ -173,6 +148,38 @@ $(document).ready(function () {
         items: 2,
       },
     },
+  });
+  $(".minus-btn").on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest("div").find("input");
+    var value = parseInt($input.val());
+    if (value > 1) {
+      value = value - 1;
+    } else {
+      value = 0;
+    }
+    $input.val(value);
+  });
+  $(".plus-btn").on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest("div").find("input");
+    var value = parseInt($input.val());
+    if (value < 100) {
+      value = value + 1;
+    } else {
+      value = 100;
+    }
+    $input.val(value);
+  });
+  var btn = $("#back-to-top");
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass("show");
+    } else {
+      btn.removeClass("show");
+    }
   });
   btn.on("click", function (e) {
     e.preventDefault();
