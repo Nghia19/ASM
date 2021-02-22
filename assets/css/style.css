@@ -2029,8 +2029,8 @@ form.add-cart {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   font-family: "montserratbold", sans-serif;
-  border: 1px solid #086fcf;
-  color: #086fcf;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   cursor: pointer;
   display: block;
   height: 4rem;
@@ -2080,6 +2080,7 @@ form.add-cart {
   display: flex;
   align-items: center;
   margin-right: 4rem;
+  padding: 1rem 0;
 }
 .quantity input {
   padding: 0.5em;
@@ -2105,6 +2106,9 @@ form.add-cart {
   display: inline-block;
   font-size: 2rem;
   font-weight: 700;
+}
+.buttons-added [name="add-to-cart"] {
+  min-width: 200px;
 }
 .product-meta {
   padding: 1.5rem 0;
