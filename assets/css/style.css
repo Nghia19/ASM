@@ -2197,7 +2197,10 @@ form.add-cart {
 .tab-pane.active {
   display: block;
 }
-.reviews.comments-list:before {
+.reviews.comments-list::before {
+  display: none;
+}
+.reviews.comments-list::after {
   display: none;
 }
 .reviews .comment-box .comment-head i {
