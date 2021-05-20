@@ -646,9 +646,7 @@ span.price {
   display: inline-block;
   width: 3rem;
   height: 3rem;
-  color: rgb(255, 255, 255);
-
-  background-color: rgb(238, 191, 0);
+  color: rgb(238, 191, 0);
   line-height: 3rem;
 }
 .add-the-cart span {
