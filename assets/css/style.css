@@ -837,7 +837,7 @@ span.price {
   transform: rotate(45deg);
   border-radius: 1rem;
   margin: 0 1rem;
-  transition: all 0.2s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .box-diamond img,
 .box-diamond i {
@@ -846,7 +846,7 @@ span.price {
   left: 50%;
   width: auto;
   transform: translate(-50%, -50%) rotate(-45deg);
-  transition: all 0.2s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 #services .box-image b {
   display: block;
@@ -857,13 +857,7 @@ span.price {
   height: 3px;
   transition: all 0.2s ease 0s;
 }
-#services .service:hover .box-diamond {
-  border: 3px solid var(--secondary-color);
-}
-#services .service:hover .box-image b,
-#services .service:hover .box-diamond {
-  background: var(--secondary-color);
-}
+
 #services .box-text {
   background-color: unset;
   padding-top: 5rem;
@@ -871,7 +865,7 @@ span.price {
 }
 #services .box-text h5 {
   font-size: 2.4rem;
-  transition: all 0.2s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 #services .service:hover h5 {
   color: var(--secondary-color);
@@ -881,10 +875,6 @@ span.price {
 }
 #services .service:hover .button {
   background: var(--secondary-color);
-}
-#services .service:hover img {
-  filter: invert(100%) sepia(18%) saturate(0%) hue-rotate(15deg)
-    brightness(103%) contrast(103%);
 }
 #footer {
   padding-top: 3rem;
